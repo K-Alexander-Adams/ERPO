@@ -1,0 +1,23 @@
+The Gsynth code can be generally replicated as follows: 
+
+library(gsynth)
+
+
+##Estimation with factors
+hom <- gsynth(homrate ~ erpo + popdensity + alc + povrate + unemp + fryer + prisonpct  + pct15to19 + pct20to24 + pct25to29 + pct30to34 + pct35to39 + pct40to44 + pct45to49 + pct50to54 + pct55to59 + pct60to64 + pct65over + policepercap + civpolpercap + assaultban + permit + pctblack + execrate  + nopermit + shallissue + pctwhite + conpct + milpct + incomepc + rwelfarepc + gini, data = erpo_GSYNTH_homicide, index = c("stnm","year"), force = "two-way", CV = TRUE, r = c(5, 10), se = TRUE, inference = "parametric", nboots = 1000, seed = 02139)
+
+hom2 <- gsynth(homrate ~ erpo, data = erpo_GSYNTH_homicide, index = c("stnm","year"), force = "two-way", CV = TRUE, r = c(5, 10), se = TRUE, inference = "parametric", nboots = 1000, seed = 02139)
+
+hom3 <- gsynth(homrate ~ erpo + fryer + pctblack + pct15to19 + pct20to24 + pct25to29 + prisonpct + gini, data = erpo_GSYNTH_homicide, index = c("stnm","year"), force = "two-way", CV = TRUE, r = c(5, 10), se = TRUE, inference = "parametric", nboots = 1000, seed = 02139)
+
+## With the first being the full model, second being the no control model, and the third being a more parsimonious model than the first. In order to get results in tabular form, run the following (swapping out hom/hom2/hom3 at your discretion):
+
+print(hom2)
+hom2$est.att
+hom2$est.avg
+hom2$est.beta
+
+##for graphing, the code looks something like this, simply changing out "hom" with the results you want to graph. In this case, -10, 10 limits the results before and after to ten years, though you can truncate or extend that to your liking.
+plot(hom, type = "gap", main="Estimated Average Treatment Effect: Homicide", xlim = c(-10, 10))
+
+##For the suicide results, instead of "homrate" you use the suicide rate variables (and also do not control for things like prison population). Also change "hom" to something like "sui" or "firearmsui". The code is otherwise identical.
