@@ -1,0 +1,21 @@
+//Synth
+xtset state year
+
+//CT 1999
+
+xtset state year
+synth homrate popdensity alc povrate unemp fryer assaultban permit nopermit shallissue pctwhite pctblack conpct milpct incomepc rwelfarepc gini pct15to19 pct20to24 pct25to29 pct30to34 pct35to39 pct40to44 pct45to49 pct50to54 pct55to59 pct60to64 pct65over, trunit(7) trperiod(1999) xperiod(1989(1)2009) fig resultsperiod (1989(1)2009) counit(1 2 3 4 5 6 8 9 10 11 12 13 14 16 17 18 19 21 22 23 24 25 26 27 28 29 31 32 33 37 36 37 38 39 40 42 43 44 47 48 49) nested allopt
+
+synth suiciderate popdensity alc povrate unemp fryer assaultban permit nopermit shallissue pctwhite pctblack conpct milpct incomepc rwelfarepc gini pct15to19 pct20to24 pct25to29 pct30to34 pct35to39 pct40to44 pct45to49 pct50to54 pct55to59 pct60to64 pct65over, trunit(7) trperiod(1999) xperiod(1989(1)2009) fig resultsperiod (1989(1)2009) counit(1 2 3 4 5 6 8 9 10 11 12 13 14 16 17 18 19 21 22 23 24 25 26 27 28 29 31 32 33 34 35 36 37 38 39 40 42 43 44 46 47 48 49 51) nested allopt
+
+//CT 2007
+synth homrate popdensity alc povrate unemp fryer assaultban permit nopermit shallissue pctwhite pctblack conpct milpct incomepc rwelfarepc gini pct15to19 pct20to24 pct25to29 pct30to34 pct35to39 pct40to44 pct45to49 pct50to54 pct55to59 pct60to64 pct65over, trunit(7) trperiod(2007) xperiod(1997(1)2017) fig resultsperiod (1997(1)2017) counit(22 33 40 46) nested allopt //had to use smaller counit set bc of various errors
+
+synth suiciderate popdensity alc povrate unemp fryer assaultban permit nopermit shallissue pctwhite pctblack conpct milpct incomepc rwelfarepc gini pct15to19 pct20to24 pct25to29 pct30to34 pct35to39 pct40to44 pct45to49 pct50to54 pct55to59 pct60to64 pct65over, trunit(7) trperiod(2007) xperiod(1997(1)2017) fig resultsperiod (1997(1)2017) counit(1 2 3 4 5 6 8 9 10 11 12 13 14 16 17 18 19 21 22 23 24 25 26 27 28 29 31 32 33 34 35 36 37 38 39 40 42 43 44 46 47 48 49 51) nested allopt
+
+
+//IN
+
+synth homrate popdensity alc povrate unemp fryer assaultban permit nopermit shallissue pctwhite pctblack conpct milpct incomepc rwelfarepc gini pct15to19 pct20to24 pct25to29 pct30to34 pct35to39 pct40to44 pct45to49 pct50to54 pct55to59 pct60to64 pct65over, trunit(15) trperiod(2005) xperiod(1995(1)2015) fig resultsperiod (1995(1)2015) counit(1 2 3 4 5 6 8 9 10 11 12 13 14 16 17 18 19 21 22 23 24 25 26 27 28 29 31 32 33 34 36 37 38 39 40 42 43 44 47 48 49) nested allopt
+
+synth suiciderate popdensity alc povrate unemp fryer assaultban permit nopermit shallissue pctwhite pctblack conpct milpct incomepc rwelfarepc gini pct15to19 pct20to24 pct25to29 pct30to34 pct35to39 pct40to44 pct45to49 pct50to54 pct55to59 pct60to64 pct65over, trunit(15) trperiod(2005) xperiod(1995(1)2015) fig resultsperiod (1995(1)2015) counit(1 2 3 4 5 6 8 9 10 11 12 13 14 16 17 18 19 21 22 23 24 25 26 27 28 29 31 32 33 34 35 36 37 38 39 40 42 43 44 46 47 48 49 51) nested allopt
